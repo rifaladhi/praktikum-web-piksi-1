@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(255, 0, 0);
+  }
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #ff00d4;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    background:   rgb(255, 0, 0);
+    margin-top: 20px;
+    color: white;
+  }
+
+.round-box {
+    border: 15px solid  rgb(3, 252, 36);
+    padding: 50px;
+    margin: 20px;
+    background-color:  rgb(250, 134, 25);;
+    animation-name: warna;
+  animation-duration: 30s;
+  }
+
+@keyframes warna {
+    0% {background-color: rgb(0, 255, 234);}
+    10% {background-color: rgb(250, 235, 25);}
+    20% {background-color: rgb(0, 255, 234);}
+    30% {background-color: rgb(250, 235, 25);}
+    40% {background-color: rgb(0, 255, 234);}
+    50% {background-color: rgb(250, 235, 25);}
+    60% {background-color: rgb(0, 255, 234);}
+    70% {background-color: rgb(250, 235, 25);}
+    80% {background-color: rgb(0, 255, 234);}
+    90% {background-color: rgb(250, 235, 25);}
+    100% {background-color: rgb(0, 255, 234);}
+  }
+
+.shadow{
+    text-shadow: 2px 2px 5px rgb(252, 34, 205);
+}
