@@ -10,22 +10,29 @@
 
         // Beri komentar maksud script di bawah ini ...
       function prosesPerhitungan() {
+        // adalah suatu bagian dari program yang dipergunakan untuk mengerjakan hasil perhitungan dengan cepat
 
-        // Console.log biasanya digunakan untuk debugging, dan berfungsi untuk menampilkan teks ke console javascript,karena setiap pesan error di javascript selalu ditapilkan di console. Dalam kasus ini kita bisa tekan f12/inspect element pada web browser project ini. lalu klik button dengan nama "Kalkulasi Keterisian Ranjang di Rumah Sakit" maka pada console akan keluar log seperti script di bawah. itu menandakan script pada function prosesPerhitungan tidak ada error dan berhasil terload dengan benar.
+        // Beri komentar maksud script di bawah ini ...
         console.log("Fungsi prosesPerhitungan() dipanggil");
+        // adalah fungsi untuk menampilkan teks ke console yang berisi pesan setiap ada error
 
-        // Digunakan untuk mengambil suatu value dari form input yang memiliki nama id input-j.
+        // Beri komentar maksud script di bawah ini ...
         var j = document.getElementById("input-j").value;
+        // untuk mengambil sebuah value inputan data dari jumlah total ranjang dirumah sakit
 
-        // Digunakan untuk mengambil suatu value dari form input yang memiliki nama id input-t.
+        // Beri komentar maksud script di bawah ini ...
         var t = document.getElementById("input-t").value;
+        // untuk mengambil sebuah value inputan data dari jumlah total ranjang yang terisi
 
         // Buat formula untuk menghitung persentase keterisian ranjang (ptj) ! 
-        // Persentase keterisian ranjang = ranjang yang terisi dibagi dengan total ranjang   
-        var ptj = t/j; 
+        // Persentase keterisian ranjang = ranjang yang terisi dibagi dengan total ranjang
 
-        // menyetel atau menampilkan konten teks di element script dengan id output-ptj dengan isian data dari variabel ptj ditambah dengan teks % setelahnya. 
+        // Persentase keterisian dihitung dari Jumlah total ranjang di rumah sakit yang terisi dibagi dengan jumlah ranjang total dirumah sakit hasilnya dikalikan dengan 100
+        var ptj = t / j * 100; 
+
+        // Beri komentar maksud script di bawah ini ...
         document.getElementById("output-ptj").textContent = ptj + " %";
+        // untuk mengambil sebuah value inputan data yang akan disimpan presentase keterisian dari Jumlah total ranjang di rumah sakit yang terisi dengan bagi Jumlah total ranjang di rumah sakit dikali 100 dan hasilnya diubah kedalam persentase persen
 
         /*
           Buat formula untuk menampilkan kondisi keterisian ranjang (k)
@@ -34,21 +41,19 @@
           Jika diatas 70%, kondisi = DARURAT
         */
 
-        var x;
-        var hitung = document.getElementById("output-ptj").value = ptj;
-        
-        if (hitung < 0.3) {
-          var x = document.getElementById("output-k").value = "AMAN";
-        }else if (hitung > 0.7) {
-          var x = document.getElementById("output-k").value = "DARURAT";
-        }else{
-          var x = document.getElementById("output-k").value = "WASPADA";
+        // Hasil kondisi didapatkan melalui hasil ptj
+        var k = "";
+                if (ptj <= 30) {
+                    k = "AMAN"
+                } else if (ptj <= 70) {
+                    k = "WASPADA"
+                } else if (ptj > 70) {
+                    k = "DARURAT"
+                }
 
-        }
-        var k = x; 
-
-        // menyetel atau menampilkan konten teks di element script dengan id output-k dengan isian data dari variabel k.
+        // Beri komentar maksud script di bawah ini ...
         document.getElementById("output-k").textContent = k;
+        // menampilkan hasil kondisi dimana datanya diambil melalui ptj dengan syarat nilai-nilai yang sudah ditentukan
 
       }
 
